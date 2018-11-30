@@ -1,0 +1,3 @@
+arch=`rtai-config --linux-version`
+rmmod=/sbin/rmmod
+$rmmod watchdogs_rt

@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ $UID != 0 ]; then SUDO="sudo "; else SUDO=""; fi
+echo
+echo "*** SIMPLE EXAMPLE (kernel) ***"
+echo "Press <enter> to load modules:"
+read junk
+./ldmod
+echo
+echo "Now start the realtime process <enter>, <enter> again to end it."
+read junk
+sync
+insmod ./rt_abs.ko;
+echo
+echo "Done. Press <enter> to remove the modules."
+read junk
+./rem
+echo "Terminare il plant e poi \`./remod\` "

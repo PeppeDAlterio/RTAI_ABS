@@ -1,0 +1,3 @@
+arch=`rtai-config --linux-version`
+rmmod rt_abs
+./remod
